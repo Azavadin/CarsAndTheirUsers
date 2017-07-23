@@ -11,6 +11,6 @@ namespace CarsAndTheirUsers.Models
         [Required, StringLength(100), Display(Name = "Name")]
         public string CarName { get; set; }
 
-        public virtual ICollection<User> Users { get; set; }
+        public virtual User User { get; set; }
     }
 }

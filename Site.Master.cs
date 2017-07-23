@@ -74,12 +74,6 @@ namespace CarsAndTheirUsers
 
         }
 
-        public IQueryable<Car> GetCars()
-        {
-            var _db = new CarsAndTheirUsers.Models.CarContext();
-            IQueryable<Car> query = _db.Cars;
-            return query;
-        }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {

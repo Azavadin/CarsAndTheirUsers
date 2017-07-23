@@ -53,7 +53,8 @@
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
-                        <li><a runat="server" href="~/UsersList">Users List</a></li>
+                        <li><a runat="server" href="~/UsersList">Users</a></li>
+                        <li><a runat="server" href="~/CarList">Cars</a></li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
@@ -73,22 +74,6 @@
                     </asp:LoginView>
                 </div>
             </div>
-        </div>
-
-         <div id="CarsMenu" style="text-align: center">       
-            <asp:ListView ID="carsList"  
-                ItemType="CarsAndTheirUsers.Models.Car" 
-                runat="server"
-                SelectMethod="GetCars" >
-                <ItemTemplate>
-                    <b style="font-size: large; font-style: normal">
-                        <a href="/UsersList.aspx?id=<%#: Item.CarID %>">
-                        <%#: Item.CarName %>
-                        </a>
-                    </b>
-                </ItemTemplate>
-                <ItemSeparatorTemplate>  |  </ItemSeparatorTemplate>
-            </asp:ListView>
         </div>
 
         <div class="container body-content">
