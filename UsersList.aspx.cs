@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using CarsAndTheirUsers.Models;
+using System;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Web.ModelBinding;
 
 namespace CarsAndTheirUsers
 {
@@ -12,6 +10,17 @@ namespace CarsAndTheirUsers
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public IQueryable<User> GetUsers([QueryString("id")] int? carId)
+        {
+            var _db = new CarsAndTheirUsers.Models.CarContext();
+            IQueryable<User> query = _db.Users;
+            if (carId.HasValue && carId > 0)
+            {
+                query = query.Where(p => p.CarID == carId);
+            }
+            return query;
         }
     }
 }
