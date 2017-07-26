@@ -2,7 +2,7 @@
 
 namespace CarsAndTheirUsers.Models
 {
-    public class CarContext : DbContext
+    public class MyDbContext : DbContext
     {
         public DbSet<Car> Cars { get; set; }
         public DbSet<User> Users { get; set; }

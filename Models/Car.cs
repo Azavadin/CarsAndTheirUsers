@@ -5,10 +5,6 @@ namespace CarsAndTheirUsers.Models
 {
     public class Car
     {
-        public Car()
-        {
-            User = new HashSet<User>();
-        }
         
         [ScaffoldColumn(false)]
         public int CarID { get; set; }
@@ -18,6 +14,6 @@ namespace CarsAndTheirUsers.Models
 
         public int UserID { get; set; }
 
-        //public virtual ICollection<User> User { get; set; }
+        public virtual ICollection<CarUserBridge> CarUserBridge { get; set; }
     }
 }

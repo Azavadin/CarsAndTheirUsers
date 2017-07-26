@@ -3,9 +3,9 @@ using System.Data.Entity;
 
 namespace CarsAndTheirUsers.Models
 {
-    public class CarDatabaseInitializer : DropCreateDatabaseAlways<CarContext>
+    public class CarDatabaseInitializer : DropCreateDatabaseAlways<MyDbContext>
     {
-        protected override void Seed(CarContext context)
+        protected override void Seed(MyDbContext context)
         {
             GetUsers().ForEach(user => context.Users.Add(user));
             GetCars().ForEach(car => context.Cars.Add(car));

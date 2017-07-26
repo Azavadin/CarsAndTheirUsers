@@ -14,7 +14,7 @@ namespace CarsAndTheirUsers
 
         public IQueryable<Car> GetCars()
         {
-            var _db = new CarsAndTheirUsers.Models.CarContext();
+            var _db = new CarsAndTheirUsers.Models.MyDbContext();
             IQueryable<Car> query = _db.Cars;
             return query;
         }

@@ -14,7 +14,7 @@ namespace CarsAndTheirUsers
 
         public IQueryable<User> GetUsers([QueryString("id")] int? carId)
         {
-            var _db = new CarsAndTheirUsers.Models.CarContext();
+            var _db = new CarsAndTheirUsers.Models.MyDbContext();
             IQueryable<User> query = _db.Users;
             if (carId.HasValue && carId > 0)
             {
