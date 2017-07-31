@@ -174,7 +174,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
     <Content Include="Account\Forgot.aspx" />
@@ -191,7 +190,7 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="CarList.aspx" />
-    <Content Include="Contact.aspx" />
+    <Content Include="CarsAccessible.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -206,7 +205,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="UsersDetails.aspx" />
+    <Content Include="UsersAccessible.aspx" />
     <Content Include="UsersList.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -350,13 +349,6 @@
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
@@ -367,12 +359,12 @@
     <Compile Include="CarList.aspx.designer.cs">
       <DependentUpon>CarList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="CarsAccessible.aspx.cs">
+      <DependentUpon>CarsAccessible.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="CarsAccessible.aspx.designer.cs">
+      <DependentUpon>CarsAccessible.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -384,10 +376,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707302111349_InitialCreate.cs" />
+    <Compile Include="Migrations\201707302111349_InitialCreate.Designer.cs">
+      <DependentUpon>201707302111349_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707302126514_initial.cs" />
+    <Compile Include="Migrations\201707302126514_initial.Designer.cs">
+      <DependentUpon>201707302126514_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Car.cs" />
     <Compile Include="Models\MyDbContext.cs" />
     <Compile Include="Models\CarDatabaseInitializer.cs" />
-    <Compile Include="Models\CarUserBridge.cs" />
+    <Compile Include="Models\Accessibility.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -406,12 +407,12 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="UsersDetails.aspx.cs">
-      <DependentUpon>UsersDetails.aspx</DependentUpon>
+    <Compile Include="UsersAccessible.aspx.cs">
+      <DependentUpon>UsersAccessible.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UsersDetails.aspx.designer.cs">
-      <DependentUpon>UsersDetails.aspx</DependentUpon>
+    <Compile Include="UsersAccessible.aspx.designer.cs">
+      <DependentUpon>UsersAccessible.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -440,6 +441,14 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201707302111349_InitialCreate.resx">
+      <DependentUpon>201707302111349_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707302126514_initial.resx">
+      <DependentUpon>201707302126514_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Data.Entity;
+using System.Data.Entity.Migrations;
 
 namespace CarsAndTheirUsers.Models
 {
@@ -7,107 +7,135 @@ namespace CarsAndTheirUsers.Models
     {
         protected override void Seed(MyDbContext context)
         {
-            GetUsers().ForEach(user => context.Users.Add(user));
-            GetCars().ForEach(car => context.Cars.Add(car));
-        }
-
-        private static List<User> GetUsers()
-        {
-            var users = new List<User> {
+            context.Users.AddOrUpdate(new User
+            {
+                UserName = "User1"
+            },
                 new User
                 {
-                    UserID = 1,
-                    UserName = "User1",
-                    CarID = 1
+                    UserName = "User2"
                 },
-
                 new User
                 {
-                    UserID = 2,
-                    UserName = "User2",
-                    CarID = 2
+                    UserName = "User3"
                 },
-
                 new User
                 {
-                    UserID = 3,
-                    UserName = "User3",
-                    CarID = 3
+                    UserName = "User4"
                 },
-
                 new User
                 {
-                    UserID = 4,
-                    UserName = "User4",
-                    CarID = 4
+                    UserName = "User5"
                 },
-
                 new User
                 {
-                    UserID = 5,
-                    UserName = "User5",
-                    CarID = 5
-                },
+                    UserName = "User6"
+                });
+            context.SaveChanges();
 
-                new User
-                {
-                    UserID = 6,
-                    UserName = "User6",
-                    CarID = 6
-                }
-
-                };
-
-            return users;
-        }
-
-        private static List<Car> GetCars()
-        {
-            var cars = new List<Car> {
+            context.Cars.AddOrUpdate(new Car
+            {
+                CarName = "Car1",
+            },
                 new Car
+                {
+                    CarName = "Car2",
+                },
+                new Car
+                {
+                    CarName = "Car3",
+                },
+                new Car
+                {
+                    CarName = "Car4",
+                },
+                new Car
+                {
+                    CarName = "Car5",
+                },
+                new Car
+                {
+                    CarName = "Car6",
+                });
+            context.SaveChanges();
+
+            context.Accessibilities.AddOrUpdate(new Accessibility
+            {
+                CarID = 1,
+                UserID = 1
+            },
+                new Accessibility
                 {
                     CarID = 1,
-                    CarName = "Car1",
-                    UserID = 1
-                },
-
-                new Car
-                {
-                    CarID = 2,
-                    CarName = "Car2",
                     UserID = 2
                 },
-
-                new Car
+                new Accessibility
                 {
-                    CarID = 3,
-                    CarName = "Car3",
+                    CarID = 1,
                     UserID = 3
                 },
-
-                new Car
+                new Accessibility
                 {
-                    CarID = 4,
-                    CarName = "Car4",
+                    CarID = 2,
+                    UserID = 1
+                },
+                new Accessibility
+                {
+                    CarID = 2,
+                    UserID = 3
+                },
+                new Accessibility
+                {
+                    CarID = 3,
                     UserID = 4
                 },
-
-                new Car
+                new Accessibility
                 {
-                    CarID = 5,
-                    CarName = "Car5",
+                    CarID = 3,
+                    UserID = 6
+                },
+                new Accessibility
+                {
+                    CarID = 4,
+                    UserID = 1
+                },
+                new Accessibility
+                {
+                    CarID = 4,
                     UserID = 5
                 },
-
-                new Car
+                new Accessibility
+                {
+                    CarID = 5,
+                    UserID = 6
+                },
+                new Accessibility
+                {
+                    CarID = 5,
+                    UserID = 1
+                },
+                new Accessibility
+                {
+                    CarID = 5,
+                    UserID = 2
+                },
+                new Accessibility
                 {
                     CarID = 6,
-                    CarName = "Car6",
+                    UserID = 1
+                },
+                new Accessibility
+                {
+                    CarID = 6,
                     UserID = 6
-                }
-                };
-
-            return cars;
+                },
+                new Accessibility
+                {
+                    CarID = 6,
+                    UserID = 4
+                });
+            context.SaveChanges();
         }
+
     }
 }

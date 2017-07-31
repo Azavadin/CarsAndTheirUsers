@@ -91,3 +91,6 @@ c:\users\user\documents\visual studio 2017\Projects\CarsAndTheirUsers\CarsAndThe
 c:\users\user\documents\visual studio 2017\Projects\CarsAndTheirUsers\CarsAndTheirUsers\obj\Debug\CarsAndTheirUsers.csprojResolveAssemblyReference.cache
 c:\users\user\documents\visual studio 2017\Projects\CarsAndTheirUsers\CarsAndTheirUsers\obj\Debug\CarsAndTheirUsers.dll
 c:\users\user\documents\visual studio 2017\Projects\CarsAndTheirUsers\CarsAndTheirUsers\obj\Debug\CarsAndTheirUsers.pdb
+C:\Users\user\Documents\Visual Studio 2017\Projects\CarsAndTheirUsers\CarsAndTheirUsers\obj\Debug\CarsAndTheirUsers.Migrations.InitialCreate.resources
+C:\Users\user\Documents\Visual Studio 2017\Projects\CarsAndTheirUsers\CarsAndTheirUsers\obj\Debug\CarsAndTheirUsers.csproj.GenerateResource.Cache
+C:\Users\user\Documents\Visual Studio 2017\Projects\CarsAndTheirUsers\CarsAndTheirUsers\obj\Debug\CarsAndTheirUsers.Migrations.initial.resources

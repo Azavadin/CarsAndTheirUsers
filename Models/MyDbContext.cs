@@ -6,5 +6,6 @@ namespace CarsAndTheirUsers.Models
     {
         public DbSet<Car> Cars { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Accessibility> Accessibilities{ get; set; }
     }
 }
