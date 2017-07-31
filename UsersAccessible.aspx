@@ -9,8 +9,8 @@
                     <b style="font-size: large; font-style: normal">
                         <%#: Item.User.UserName %>
                         </b>
+                    <br>
                 </ItemTemplate>
-                <ItemSeparatorTemplate>  |  </ItemSeparatorTemplate>
             </asp:ListView>
         </div>
 

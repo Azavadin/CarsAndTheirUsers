@@ -11,8 +11,8 @@
                         <%#: Item.CarName %>
                         </a>
                     </b>
+                    <br>
                 </ItemTemplate>
-                <ItemSeparatorTemplate>  |  </ItemSeparatorTemplate>
             </asp:ListView>
         </div>
 </asp:Content>
